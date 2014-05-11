@@ -12,13 +12,14 @@ par( mfrow=c(2,2) )
 
 plot( hpc$DateTime, hpc$Global_active_power, main="", xlab="",         ylab="Global active power",   type="l" )
 
-plot( hpc$DateTime, hpc$Global_active_power, main="", xlab="datetime", ylab="Voltage",               type="l" )
+plot( hpc$DateTime, hpc$Voltage, main="", xlab="datetime", ylab="Voltage",               type="l" )
 
 plot(hpc$DateTime, hpc$Sub_metering_1, pch=NA, xlab="", ylab="Energy sub metering")
 lines(hpc$DateTime, hpc$Sub_metering_1)
 lines(hpc$DateTime, hpc$Sub_metering_2, col='red')
 lines(hpc$DateTime, hpc$Sub_metering_3, col='blue')
 
-plot( hpc$DateTime, hpc$Global_active_power, main="", xlab="datetime", ylab="Global_Reactive_Power", type="l" )
+plot( hpc$DateTime, hpc$Global_reactive_power, main="", xlab="datetime", ylab="Global_Reactive_Power", type="l" )
 
 dev.off()
+
